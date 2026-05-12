@@ -1,0 +1,55 @@
+# Virtual Environment
+venv/
+.env
+
+# Python Cache
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Jupyter Notebook Checkpoints
+.ipynb_checkpoints/
+
+# Vector Database
+chroma_db/
+
+# LangChain / LangSmith
+.langchain/
+
+# Logs
+*.log
+
+# OS Files
+.DS_Store
+Thumbs.db
+
+# IDE Files
+.vscode/
+.idea/
+
+# Streamlit
+.streamlit/secrets.toml
+
+# Test / Coverage
+.coverage
+htmlcov/
+
+# Build Files
+build/
+dist/
+*.egg-info/
+
+# Temporary Files
+temp/
+tmp/
+
+# ML Models / Large Files
+models/
+*.bin
+*.pt
+*.safetensors
+
+# Data Files (Optional)
+# Uncomment if datasets are large
+# data/
