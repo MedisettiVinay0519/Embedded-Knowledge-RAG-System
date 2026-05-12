@@ -1,7 +1,7 @@
 from langchain_huggingface import HuggingFaceEmbeddings
 
-from chunker import split_documents
-from loader import load_documents
+from app.ingestion.chunker import split_documents
+from app.ingestion.loader import load_documents
 
 
 def get_embedding_model():

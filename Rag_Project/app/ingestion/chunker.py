@@ -1,5 +1,5 @@
 from langchain_text_splitters import RecursiveCharacterTextSplitter
-from loader import load_documents
+from app.ingestion.loader import load_documents
 
 
 def split_documents(documents):
