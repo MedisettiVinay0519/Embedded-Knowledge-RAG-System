@@ -1,26 +1,33 @@
-from langchain_community.document_loaders import PyPDFDirectoryLoader
+import sys
 from pathlib import Path
 
+# =========================================================
+# ROOT PATH
+# =========================================================
 
-# Get project root directory
-BASE_DIR = Path(__file__).resolve().parents[2]
+sys.path.append(str(Path(__file__).resolve().parents[2]))
 
-# Data directory path
-DATA_PATH = BASE_DIR / "data"
+# =========================================================
+# IMPORTS
+# =========================================================
 
+from langchain_community.document_loaders import PyPDFDirectoryLoader
 
-def load_documents():
-    """
-    Load all PDF documents recursively from the data directory.
-    """
+# =========================================================
+# LOAD DOCUMENTS
+# =========================================================
 
-    if not DATA_PATH.exists():
-        raise FileNotFoundError(f"Data directory not found: {DATA_PATH}")
+def load_documents(data_path="Rag_Project/data"):
 
-    loader = PyPDFDirectoryLoader(
-        path=str(DATA_PATH),
-        glob="**/*.pdf"
-    )
+    data_dir = Path(data_path)
+
+    if not data_dir.exists():
+
+        raise FileNotFoundError(
+            f"Data directory not found: {data_path}"
+        )
+
+    loader = PyPDFDirectoryLoader(str(data_dir))
 
     documents = loader.load()
 
@@ -28,12 +35,15 @@ def load_documents():
 
     return documents
 
+# =========================================================
+# TEST
+# =========================================================
 
 if __name__ == "__main__":
 
     docs = load_documents()
 
-    print("===== SAMPLE DOCUMENT =====\n")
+    print("\n===== SAMPLE DOCUMENT =====\n")
 
     print(docs[0].page_content[:1000])
 

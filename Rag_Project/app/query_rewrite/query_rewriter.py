@@ -81,6 +81,7 @@ def rewrite_query(query):
     - Prefer short keyword-rich rewritten queries
     - Preserve the embedded systems and operating systems context
     - Expand technical acronyms correctly
+    - If the query is unrelated to embedded systems or operating systems, return the original query unchanged
     User Query:
     {query}
     """

@@ -1,37 +1,62 @@
+import sys
+from pathlib import Path
+
+# =========================================================
+# ROOT PATH
+# =========================================================
+
+sys.path.append(str(Path(__file__).resolve().parents[2]))
+
+# =========================================================
+# IMPORTS
+# =========================================================
+
 from langchain_chroma import Chroma
 
-from embedder import get_embedding_model
-from chunker import split_documents
-from loader import load_documents
+from app.ingestion.embedder import get_embedding_model
 
+# =========================================================
+# CHROMA CONFIG
+# =========================================================
 
 CHROMA_PATH = "chroma_db"
 
+# =========================================================
+# CREATE VECTOR STORE
+# =========================================================
 
 def create_vector_store(chunks):
-    """
-    Create and persist Chroma vector database.
-    """
 
     embedding_model = get_embedding_model()
 
     vector_store = Chroma.from_documents(
+
         documents=chunks,
+
         embedding=embedding_model,
+
         persist_directory=CHROMA_PATH
     )
 
-    print("\nChromaDB vector store created successfully.\n")
+    print("\n✅ Vector database created successfully.")
+
+    print(f"\nStored {len(chunks)} chunks in ChromaDB.")
 
     return vector_store
 
+# =========================================================
+# LOAD VECTOR STORE
+# =========================================================
 
-if __name__ == "__main__":
+def load_vector_store():
 
-    docs = load_documents()
+    embedding_model = get_embedding_model()
 
-    chunks = split_documents(docs)
+    vector_store = Chroma(
 
-    vector_store = create_vector_store(chunks)
+        persist_directory=CHROMA_PATH,
 
-    print(f"Stored {len(chunks)} chunks in ChromaDB.")
+        embedding_function=embedding_model
+    )
+
+    return vector_store
