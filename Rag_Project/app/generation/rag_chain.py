@@ -52,15 +52,19 @@ def generate_response(query):
         "question": query
     })
 
-    return response.content
+    return {
+    "question": query,
+    "answer": response.content,
+    "contexts": [doc.page_content for doc in retrieved_docs]
+}
 
 
 if __name__ == "__main__":
 
     query = "Explain SPI communication"
 
-    answer = generate_response(query)
+    result = generate_response(query)
 
     print("\n===== GENERATED ANSWER =====\n")
 
-    print(answer)
+    print(result["answer"])
