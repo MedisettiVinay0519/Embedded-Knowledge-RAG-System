@@ -1,5 +1,11 @@
 # Embedded Knowledge RAG System
 
+![Python](https://img.shields.io/badge/Python-3.11-blue)
+![LangChain](https://img.shields.io/badge/LangChain-RAG-green)
+![Streamlit](https://img.shields.io/badge/Frontend-Streamlit-red)
+![ChromaDB](https://img.shields.io/badge/VectorDB-ChromaDB-orange)
+![Groq](https://img.shields.io/badge/LLM-Groq-purple)
+
 An Advanced Retrieval-Augmented Generation (RAG) System for:
 
 - Embedded Systems
