@@ -95,6 +95,10 @@ Grounded Response
 # Screenshots
 
 ## Main RAG Interface
+![Main-UI](images/)
+![Main-UI](images/)
+![Main-UI](images/)
+![Main-UI](images/)
 
 
 ---
