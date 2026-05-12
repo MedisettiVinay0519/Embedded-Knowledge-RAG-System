@@ -96,7 +96,7 @@ Grounded Response
 
 ## Main RAG Interface
 
-<img src="screenshots/main_ui.png" width="100%">
+![Dashboard](images/Dashboard-0.png)
 
 ---
 
