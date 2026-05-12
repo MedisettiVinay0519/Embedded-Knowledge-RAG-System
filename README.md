@@ -96,19 +96,19 @@ Grounded Response
 
 ## Main RAG Interface
 
-![Dashboard](images/Dashboard-0.png)
 
 ---
 
 ## Evaluation Dashboard
 
-<img src="screenshots/dashboard.png" width="100%">
+![Dashboard](images/Dashboard-0.png)
+![Dashboard](images/Dashboard-1.png)
 
 ---
 
 ## Pipeline Comparison
 
-<img src="screenshots/comparison.png" width="100%">
+![Dashboard](images/Dashboard-2.png)
 
 ---
 
