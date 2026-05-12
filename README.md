@@ -29,7 +29,20 @@ Built using:
 - RAGAS Evaluation
 
 ---
+## Key Features
 
+- Hybrid Retrieval (Dense + BM25)
+- Query Rewriting
+- Cross-Encoder Reranking
+- ChromaDB Vector Store
+- Groq LLM Integration
+- Dynamic PDF Upload
+- RAGAS Evaluation
+- Streamlit Dashboard
+- Source Grounding
+- Evaluation Visualization
+
+  
 # Features
 
 ## Advanced Retrieval Pipeline
