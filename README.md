@@ -152,7 +152,7 @@ Rag_Project/
 ## Clone Repository
 
 ```bash
-git clone <your-repo-url>
+git clone https://github.com/MedisettiVinay0519/Embedded-Knowledge-RAG-System
 cd Rag_Project
 ```
 
