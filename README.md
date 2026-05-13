@@ -95,7 +95,7 @@ Visualization:
 
 # Project Architecture
 
-![Architecture](images/Dashboard-0.png)
+![Architecture](images/Embedded%20Knowledge%20RAG%20System-Arch.jpeg)
 
 # Screenshots
 
