@@ -94,23 +94,8 @@ Visualization:
 ---
 
 # Project Architecture
-<img width="2480" height="4884" alt="image" src="https://github.com/user-attachments/assets/905ce115-31e0-43e4-a928-23545179afdb" />
 
-```text
-User Query
-    ↓
-Query Rewriting
-    ↓
-Hybrid Retrieval
-    ↓
-Cross Encoder Reranking
-    ↓
-Groq LLM
-    ↓
-Grounded Response
-```
-
----
+![Architecture](images/Dashboard-0.png)
 
 # Screenshots
 
